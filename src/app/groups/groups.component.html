@@ -1,0 +1,14 @@
+<h1 style="text-align: center; margin: 20px;">{{pageTitle}}</h1>
+
+<div class="flex-container" style="text-align: center;">
+  <div class="card col-md-5 col-sm-1" style="width: 18rem;" *ngFor="let group of groups">  
+    <div class="card-body">
+      <h5 class="card-title">{{group.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Created on: {{group.created | date}}</h6>
+      <p class="card-text">{{group.description}}</p>
+      <a href= {{group.link}} target="_blank">More Information</a>
+    </div>
+  </div>        
+</div>
+  
+

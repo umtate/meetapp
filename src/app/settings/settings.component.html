@@ -1,0 +1,13 @@
+<h1 style="text-align: center; margin: 20px;">Settings</h1>
+<div class="flex-container">
+      <div class="card">
+          <mat-selection-list #category>
+              <mat-list-option *ngFor="let category of categories"
+               (click)="selectedCategory(category)">
+                {{category.name}}
+              </mat-list-option>
+            </mat-selection-list>
+      </div> 
+</div> 
+
+
