@@ -14,12 +14,14 @@ import { GroupsComponent } from './groups/groups.component';
 import { SettingsComponent } from './settings/settings.component';
 import { DataService } from './data.service';
 import { AppRoutingModule } from './/app-routing.module';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GroupsComponent,
-    SettingsComponent
+    SettingsComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ export class DataService {
   private baseUrl = "https://cors-anywhere.herokuapp.com/api.meetup.com"
   public categoryId: string;
   public categoryName: string;
+  
   constructor(private http: HttpClient ) { }
   
   getCategories(){
