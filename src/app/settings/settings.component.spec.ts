@@ -1,10 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {MatListModule} from '@angular/material/list';
 
+import{ SpinnerComponent } from '../spinner/spinner.component';
 import { SettingsComponent } from './settings.component';
-import { of } from 'rxjs/observable/of';
+//import { of } from 'rxjs/observable/of';
 import { DataService } from '../data.service';
-import { from } from 'rxjs/observable/from';
+//import { from } from 'rxjs/observable/from'; 
 import { Router } from '@angular/router';
 
 describe('SettingsComponent', () => {
@@ -21,7 +22,7 @@ describe('SettingsComponent', () => {
     const routerSpy = jasmine.createSpyObj('Router', ['navigate']);
 
     TestBed.configureTestingModule({ 
-      declarations: [ SettingsComponent ],
+      declarations: [ SettingsComponent, SpinnerComponent ],
       imports: [ MatListModule ],
       providers: [{provide: DataService, useValue: dataService}, {provide: Router, useValue: routerSpy} ]
       

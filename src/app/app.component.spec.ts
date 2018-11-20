@@ -1,24 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-import { DataService } from './data.service';
+import { RouterModule } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing';
-import { of } from 'rxjs/observable/of';
+import { NavbarComponent} from './navbar/navbar.component';
+
+
 
 describe('AppComponent', () => {
-  let test = ['test','test2','test3'];
- 
-  const dataService =jasmine.createSpyObj('DataService', ['getCategories']);
-
-  let getCategoriesSpy = dataService.getCategories.and.returnValue(of(test));
+  
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        NavbarComponent
       ],
-      imports:[RouterTestingModule],
-      providers: [{provide: DataService, useValue: dataService}]
+      imports:[RouterTestingModule, RouterModule],
     }).compileComponents();
   }));
   it('should create the app', async(() => {

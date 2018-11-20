@@ -2,12 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 20px; 
 }
 
 .card{
     margin: 10px;
     height: 360px;  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contents{
+    float: right;
+    position: relative;
 }
 
 .card-text{
@@ -18,3 +24,4 @@
 .card-subtitle{
     margin: 10px 0px;
 }
+

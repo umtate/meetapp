@@ -1,0 +1,21 @@
+<aside class="col-md-3 col-sm-1 filter-side "> 
+    <div class="card ">
+      <header class="card-header">
+        <h5 class="title">{{pageTitle}} categories </h5>
+      </header>
+      <div class="filter-content">
+        <div class="card-body">
+          <h6> Select Group Categories</h6>
+          <div class="form-group">
+            <div class="checkbox" *ngFor="let category of groupCategories">
+              <label>
+                <input formControlName="groupCat" 
+                        type="checkbox" value="{{category}}"
+                        (change)="filterGroup($event,category)">{{category}}
+              </label>
+              </div> 
+          </div>
+        </div> 
+      </div>           
+    </div>       
+</aside>

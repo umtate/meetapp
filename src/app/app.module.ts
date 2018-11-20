@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
+import { NgModule } from '@angular/core'; 
+import { HttpClientModule } from '@angular/common/http'
 import { RouterModule, Routes }  from '@angular/router';
 
 
@@ -15,17 +14,22 @@ import { SettingsComponent } from './settings/settings.component';
 import { DataService } from './data.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GroupsComponent,
     SettingsComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    NavbarComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule,
     BrowserAnimationsModule,
     MatListModule,
     AppRoutingModule

@@ -16,7 +16,7 @@ describe('DataService', () => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, HttpTestingController],
       providers: [DataService]
-    });
+    }); 
   });
 
   it('should return expected categories (HttpClient called once)', () => {

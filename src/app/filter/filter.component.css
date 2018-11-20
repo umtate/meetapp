@@ -1,0 +1,13 @@
+.filter-side{
+    position: absolute;
+    float: left;
+    margin-top: 10px;
+    
+}
+@media screen and (max-width: 600px) {
+    .filter-side{
+        position: relative;
+        float: none;
+    }
+
+  }

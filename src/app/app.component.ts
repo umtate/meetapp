@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {DataService } from './data.service';
-
 
 
 @Component({
@@ -10,12 +8,5 @@ import {DataService } from './data.service';
 })
 export class AppComponent {
 
-    constructor(private _data: DataService){
-      if(localStorage['category'] !== null){
-        _data.getCategories().subscribe(res => {
-          localStorage['category'] = JSON.stringify(res['results']);
-        })
-      }
-       
-    }
+    constructor(){  }
 } 

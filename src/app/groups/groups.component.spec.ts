@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SpinnerComponent } from '../spinner/spinner.component';
 import { GroupsComponent } from './groups.component';
 import { DataService } from '../data.service';
+import { FilterComponent } from '../filter/filter.component';
 
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -17,14 +18,16 @@ describe('GroupsComponent', () => {
                 link: "https://www.meetup.com/meetup-group-JytYsBrC/",
                 localized_country_name: "South Africa",
                 localized_location: "Johannesburg, South Africa",lon: 28.04,
-                members: 50},
+                members: 50, category: {id: 12, name: "string", shortname: "string",
+                  sort_name: "string"}},
                 {city: "Johannesburg",country: "ZA",created: 1538291778000,
                 description: "Anyone who loves reading and appreciates the value of literature.",
                 id: 29999894, join_mode: "open", lat: -26.19,
                 link: "https://www.meetup.com/meetup-group-JytYsBrC/",
                 localized_country_name: "South Africa",
                 localized_location: "Johannesburg, South Africa",lon: 28.04,
-                members: 40}]
+                members: 40, category: {id: 12, name: "string", shortname: "string",
+                sort_name: "string"}}]
   let testTile = 'Group';
 
   const dataService =jasmine.createSpyObj('DataService', ['findGroups', 'allGroups','categoryName']);
@@ -36,7 +39,7 @@ describe('GroupsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GroupsComponent, SpinnerComponent ],
+      declarations: [ GroupsComponent, SpinnerComponent, FilterComponent ],
       imports: [ RouterModule, RouterTestingModule ],
       providers: [{provide: DataService, useValue: dataService}]
     })
@@ -55,11 +58,11 @@ describe('GroupsComponent', () => {
   });
 
   it('groups array should be defined',()=>{
-    expect(component.groups).toBeDefined();
+    expect(component.group).toBeDefined();
   })
 
   it('groups array to be 2', ()=>{
-    expect(component.groups.length).toEqual(2);    
+    expect(component.group.length).toEqual(2);    
   });
 
   it('Spinner should be equal to false', ()=>{

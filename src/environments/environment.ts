@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  key: '102338591a3e384c625012f2374a4a',
+  baseUrl: 'https://cors-anywhere.herokuapp.com/api.meetup.com'
 };
